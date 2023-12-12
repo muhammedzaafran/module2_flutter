@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:module2_flutter/Text/example1.dart';
-import 'package:module2_flutter/text/example2.dart';
-
-import 'container/example1.dart';
-import 'container/example2.dart';
+import 'package:module2_flutter/Button/eg1.dart';
+import 'package:module2_flutter/Row/eg1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-    home: SampleContainer(),
+    home: ButtonSample(),
     );
   }
 }
