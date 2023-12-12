@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CounterApp extends StatefulWidget {
-  const CounterApp({super.key});
+class MyCounterApp extends StatefulWidget {
+  const MyCounterApp({super.key});
 
   @override
-  State<CounterApp> createState() => _CounterAppState();
+  State<MyCounterApp> createState() => _CounterAppState();
 }
 
-class _CounterAppState extends State<CounterApp> {
+class _CounterAppState extends State<MyCounterApp> {
   int count = 0;
   void incCount() {
     setState(() {
@@ -24,15 +24,17 @@ class _CounterAppState extends State<CounterApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellow,
       appBar: AppBar(
-        title: const Text("Counter app"),
+        title: const Text("My Counter App"),
+        backgroundColor: Colors.black,
       ),
       body: Container(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Center(
               child: Text(
-            "Count : $count ",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            "Counter : $count ",
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 35, fontStyle:FontStyle.normal),
           )),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -41,15 +43,16 @@ class _CounterAppState extends State<CounterApp> {
                   onPressed: () {
                     incCount();
                   },
-                  child: const Text("Increment")),
+                  child: const Text("INCREMENT")),
               const SizedBox(
-                width: 20,
+                width: 10,
+                height: 30,
               ),
               ElevatedButton(
                   onPressed: () {
                     decCount();
                   },
-                  child: const Text("Decrement"))
+                  child: const Text("DECREMENT"))
             ],
           )
         ]),
