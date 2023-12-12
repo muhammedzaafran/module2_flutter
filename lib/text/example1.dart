@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TextSample extends StatefulWidget {
@@ -34,11 +33,7 @@ class _TextSampleState extends State<TextSample> {
           backgroundColor: Colors.yellow,
           fontFamily: 'Whisper-Regular',
           shadows: [
-            Shadow(
-                color: Colors.black,
-                offset: Offset(5, 5),
-                blurRadius: 5
-            )
+            Shadow(color: Colors.black, offset: Offset(5, 5), blurRadius: 5)
           ],
         ),
       )),
