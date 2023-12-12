@@ -15,6 +15,10 @@ class _ButtonSampleState extends State<ButtonSample> {
         title: Text("Button"),
         backgroundColor: Colors.teal,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: FloatingActionButton(child: Icon(Icons.add),onPressed: () {
+        
+      },),
       body: Container(
         alignment: Alignment.center,
         child: Column(children: [
@@ -34,7 +38,15 @@ class _ButtonSampleState extends State<ButtonSample> {
                   backgroundColor: MaterialStatePropertyAll(Colors.pink)),
               onPressed: () {},
               child: Text("Submit")),
-          IconButton(onPressed: () {}, icon: Icon(Icons.home))
+          IconButton(onPressed: () {}, icon: Icon(Icons.home)),
+          OutlinedButton(
+              style: ButtonStyle(
+                  side: MaterialStatePropertyAll(
+                      BorderSide(color: Colors.black, width: 2))),
+              onPressed: () {},
+              child: Text("Outlined button")),
+          TextButton.icon(
+              onPressed: () {}, icon: Icon(Icons.home), label: Text("Home")),
         ]),
       ),
     );
