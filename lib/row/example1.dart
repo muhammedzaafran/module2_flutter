@@ -5,7 +5,13 @@ class RowSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("ROW SAMPLE 1.0"),
+        backgroundColor: Colors.black,
+        centerTitle: true,
+        leading: const Icon(Icons.account_circle),
+        actions: const [Icon(Icons.accessibility_sharp)],
+      ),
       body: Container(
         color: Colors.green[300],
         height: double.infinity,
@@ -13,7 +19,7 @@ class RowSample extends StatelessWidget {
         child: Row(
 
 // mainAxisAlignment: MainAxisAlignment.start,
-// crossAxisAlignment: CrossAxisAlignment.start,
+ //crossAxisAlignment: CrossAxisAlignment.start,
 // mainAxisAlignment: MainAxisAlignment.start,
 // crossAxisAlignment: CrossAxisAlignment.center,
 // mainAxisAlignment: MainAxisAlignment.start,
@@ -64,9 +70,9 @@ class RowSample extends StatelessWidget {
 //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Container(width: 50, height: 50, color: Colors.purple),
-            Container(width: 50, height: 50, color: Colors.red),
-            Container(width: 50, height: 50, color: Colors.yellow)
+            Container(width: 50, height: 50, color: Colors.teal),
+            Container(width: 50, height: 50, color: Colors.black),
+            Container(width: 50, height: 50, color: Colors.white)
           ],
         ),
       ),
