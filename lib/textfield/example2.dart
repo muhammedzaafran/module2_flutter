@@ -11,10 +11,11 @@ class _TextfieldState extends State<TextfieldSample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text("TEXT FIELD SAMPLE"),
+        centerTitle: true,
       ),
       body: Container(
         alignment: Alignment.center,
