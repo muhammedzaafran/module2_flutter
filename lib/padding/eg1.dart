@@ -17,13 +17,13 @@ class _PaddingSampleState extends State<PaddingSample> {
         backgroundColor: Colors.teal,
       ),
       body: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         alignment: Alignment.center,
         color: Colors.blueGrey,
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(12),
+              margin: const EdgeInsets.all(12),
               alignment: Alignment.center,
               height: 100,
               width: 200,
@@ -33,7 +33,7 @@ class _PaddingSampleState extends State<PaddingSample> {
             
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.all(12),
+              margin: const EdgeInsets.all(12),
               height: 100,
               width: 200,
               color: Colors.pink,
@@ -43,7 +43,7 @@ class _PaddingSampleState extends State<PaddingSample> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(12),
+              margin: const EdgeInsets.all(12),
               height: 100,
               width: 200,
               color: Colors.blue,
