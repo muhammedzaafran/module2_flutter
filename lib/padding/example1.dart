@@ -44,6 +44,8 @@ class _PaddingSampleState extends State<PaddingSample> {
             ),
             Container(
               margin: const EdgeInsets.all(12),
+              alignment: Alignment.center,
+              padding: const EdgeInsets.only(right: 30),
               height: 100,
               width: 200,
               color: Colors.blue,
