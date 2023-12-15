@@ -20,13 +20,13 @@ class _MenuSampleState extends State<MenuSample> {
               return [
                 const PopupMenuItem(
                     child: ListTile(
-                  title: Text("Download"),
-                  trailing: Icon(Icons.download),
+                     title: Text("Download"),
+                    trailing: Icon(Icons.download),
                 )),
                 const PopupMenuItem(
                     child: ListTile(
-                  title: Text("Download"),
-                  trailing: Icon(Icons.download),
+                    title: Text("Download"),
+                      trailing: Icon(Icons.download),
                 )),
                 const PopupMenuItem(child: Text("click")),
                 const PopupMenuItem(child: Text("next"))
