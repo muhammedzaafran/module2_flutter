@@ -8,45 +8,47 @@ class MadeApp extends StatefulWidget {
 }
 
 class _TextfieldState extends State<MadeApp> {
+  bool passwordVisible = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         actions: [
-      PopupMenuButton(
-      itemBuilder: (context) {
-    return [
-    const PopupMenuItem(
-    child: ListTile(
-    title: Text("Settings"),
-    trailing: Icon(Icons.settings),
-    )),
-    const PopupMenuItem(
-    child: ListTile(
-    title: Text("logout"),
-    trailing: Icon(Icons.logout),
-    )),
-    ];
-    },
-    )
+          PopupMenuButton(
+            itemBuilder: (context) {
+              return [
+                const PopupMenuItem(
+                    child: ListTile(
+                  title: Text("Settings"),
+                  trailing: Icon(Icons.settings),
+                )),
+                const PopupMenuItem(
+                    child: ListTile(
+                  title: Text("logout"),
+                  trailing: Icon(Icons.logout),
+                )),
+              ];
+            },
+          ),
         ],
         backgroundColor: Colors.black,
         title: const Text("SampleApp"),
+        foregroundColor: Colors.white,
         centerTitle: true,
       ),
       body: Container(
-        alignment: Alignment.center, margin: const EdgeInsets.all(50),
-        child: Column(
-            children: [
+        alignment: Alignment.center,
+        margin: const EdgeInsets.all(50),
+        child: Column(children: [
           const Text(
-            "LOGIN PAGE",
+            "HIGH TABLE",
             textAlign: TextAlign.center,
             style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.normal),
-
+                fontStyle: FontStyle.normal,
+                backgroundColor: Colors.pink),
           ),
           const SizedBox(
             height: 18,
@@ -58,7 +60,7 @@ class _TextfieldState extends State<MadeApp> {
                 children: [
                   TextFormField(
                     cursorColor: Colors.green,
-                    keyboardType: TextInputType.visiblePassword,
+                    keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         prefixIcon: const Icon(Icons.person),
@@ -73,9 +75,21 @@ class _TextfieldState extends State<MadeApp> {
                     height: 30,
                   ),
                   TextFormField(
+                    obscureText: passwordVisible,
                     cursorColor: Colors.green,
-                    keyboardType: TextInputType.name,
+                    keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
+                        suffixIcon: IconButton(
+                            onPressed: () {
+                              setState(
+                                () {
+                                  passwordVisible = !passwordVisible;
+                                },
+                              );
+                            },
+                            icon: Icon(passwordVisible
+                                ? Icons.visibility
+                                : Icons.visibility_off)),
                         contentPadding: const EdgeInsets.all(10),
                         prefixIcon: const Icon(Icons.person),
                         label: const Text("input password"),
@@ -89,8 +103,7 @@ class _TextfieldState extends State<MadeApp> {
               ),
             ),
           ),
-        ]
-        ),
+        ]),
       ),
     );
   }
