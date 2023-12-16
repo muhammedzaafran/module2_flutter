@@ -40,7 +40,7 @@ class _TextfieldState extends State<MadeApp> {
         ],
         backgroundColor: Colors.black,
         title: const Text(
-          "WELCOME",
+          "S A M P L E  A P P",
           style: TextStyle(
             color: Colors.red,
             fontWeight: FontWeight.bold,
