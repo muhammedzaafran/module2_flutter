@@ -18,8 +18,9 @@ class _TextfieldState extends State<TextfieldSample> {
         centerTitle: true,
       ),
       body: Container(
-        alignment: Alignment.center, margin: const EdgeInsets.all(50),
-        child: Column(children: [
+        alignment: Alignment.center,
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
           const Text(
             "LOGIN HERE",
             textAlign: TextAlign.center,
@@ -28,47 +29,24 @@ class _TextfieldState extends State<TextfieldSample> {
                 fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.normal),
           ),
-          const SizedBox(
-            height: 10,
-          ),
           Form(
             child: SizedBox(
               width: 300,
-              child: Column(
-                children: [
-                  TextFormField(
-                    cursorColor: Colors.green,
-                    keyboardType: TextInputType.visiblePassword,
-                    decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.all(10),
-                        prefixIcon: const Icon(Icons.person),
-                        label: const Text("username"),
-                        hintText: "username here",
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8))),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  TextFormField(
-                    cursorColor: Colors.green,
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.all(10),
-                        prefixIcon: const Icon(Icons.person),
-                        label: const Text("password"),
-                        hintText: "password here",
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8))),
-                  ),
-                ],
+              child: TextFormField(
+                cursorColor: Colors.green,
+                keyboardType: TextInputType.name,
+                decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(30),
+                    prefixIcon: const Icon(Icons.person),
+                    label: const Text("username"),
+                    hintText: "username here",
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8))),
               ),
             ),
-          ),
+          )
         ]),
       ),
     );
