@@ -11,6 +11,7 @@ class MadeApp extends StatefulWidget {
 class _TextfieldState extends State<MadeApp> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final _loginForm = GlobalKey<FormState>();
   bool passwordVisible = false;
   String name = '';
   String password = '';
@@ -70,19 +71,29 @@ class _TextfieldState extends State<MadeApp> {
             height: 18,
           ),
           Form(
+            key: _loginForm,
             child: SizedBox(
               width: 300,
               child: Column(
                 children: [
                   TextFormField(
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return "Please enter your email";
+                      } else if (!value.contains("@gmail")) {
+                        return "please enter a valid email";
+                      } else {
+                        return null;
+                      }
+                    },
                     controller: _nameController,
                     cursorColor: Colors.green,
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         prefixIcon: const Icon(Icons.person),
-                        label: const Text("username"),
-                        hintText: "input username",
+                        label: const Text("Email"),
+                        hintText: "input email",
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8)),
                         enabledBorder: OutlineInputBorder(
@@ -92,6 +103,19 @@ class _TextfieldState extends State<MadeApp> {
                     height: 30,
                   ),
                   TextFormField(
+                    validator: (value) {
+                      RegExp regex = RegExp(
+                          r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+                      if (value!.isEmpty) {
+                        return "Please enter your password";
+                      } else {
+                        if (!regex.hasMatch(value)) {
+                          return 'Enter valid password';
+                        } else {
+                          return null;
+                        }
+                      }
+                    },
                     controller: _passwordController,
                     obscureText: passwordVisible,
                     cursorColor: Colors.green,
@@ -123,10 +147,12 @@ class _TextfieldState extends State<MadeApp> {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        setState(() {
-                          name = _nameController.text;
-                          password = _passwordController.text;
-                        });
+                        if (_loginForm.currentState!.validate()) {
+                          setState(() {
+                            name = _nameController.text;
+                            password = _passwordController.text;
+                          });
+                        }
                       },
                       style: const ButtonStyle(
                         foregroundColor: MaterialStatePropertyAll(Colors.white),

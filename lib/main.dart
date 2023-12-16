@@ -10,6 +10,7 @@ import 'package:module2_flutter/textfield/example2.dart';
 
 import 'button/example1.dart';
 import 'calculator_app/calculator1.dart';
+import 'check_box/eg1.dart';
 import 'counterapp/counterapp1.dart';
 import 'freesamples/number1.dart';
 import 'image/example1.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-    home: MadeApp(),
+      home: CheckBoxSample(),
     );
   }
 }
