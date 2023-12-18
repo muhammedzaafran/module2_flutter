@@ -110,7 +110,7 @@ class _TextfieldState extends State<MadeApp> {
                         return "Please enter your password";
                       } else {
                         if (!regex.hasMatch(value)) {
-                          return 'Enter valid password';
+                          return 'please enter a valid password';
                         } else {
                           return null;
                         }
