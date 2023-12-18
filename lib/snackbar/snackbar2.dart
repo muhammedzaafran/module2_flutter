@@ -8,25 +8,24 @@ class SnackBar2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: false,
         title: "S N A C K B A R D E M O",
-    home : Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Text(
-        ("S N A C K B A R"),
-          style: TextStyle(
-            fontSize:35,
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w900,
-            color: Colors.white,
+        home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            title: const Text(
+              ("S N A C K B A R"),
+              style: TextStyle(
+                fontSize: 35,
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+              ),
+            ),
+            centerTitle: true,
           ),
-      ),
-      centerTitle: true,
-    ),
-      body: const SnackBarPage(),
-    )
-    );
+          body: const SnackBarPage(),
+        ));
   }
 }
 
@@ -44,17 +43,18 @@ class SnackBarPage extends StatelessWidget {
         onPressed: () {
           final snackBar = SnackBar(
             backgroundColor: Colors.black,
-              content: const Text(
-                "No steam account found",
-              ),
-            action: SnackBarAction(label: "Retry",
-                textColor: Colors.white,
-                onPressed: () {
-
-                },),
+            content: const Text(
+              "No steam account found",
+            ),
+            action: SnackBarAction(
+              label: "Retry",
+              textColor: Colors.white,
+              onPressed: () {},
+            ),
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        }, child: const Text("Show steam account"),
+        },
+        child: const Text("Show steam account"),
       ),
     );
   }
