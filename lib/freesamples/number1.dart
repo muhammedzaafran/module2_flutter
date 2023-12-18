@@ -40,7 +40,7 @@ class _TextfieldState extends State<MadeApp> {
         ],
         backgroundColor: Colors.black,
         title: const Text(
-          "S A M P L E  A P P",
+          " S A M P L E  A P P L I C A T I O N ",
           style: TextStyle(
             color: Colors.red,
             fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class _TextfieldState extends State<MadeApp> {
                   TextFormField(
                     validator: (value) {
                       RegExp regex = RegExp(
-                          r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+                          r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$&*~]).{8,}$');
                       if (value!.isEmpty) {
                         return "Please enter your password";
                       } else {
@@ -118,7 +118,7 @@ class _TextfieldState extends State<MadeApp> {
                     },
                     controller: _passwordController,
                     obscureText: passwordVisible,
-                    cursorColor: Colors.green,
+                    cursorColor: Colors.black,
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                         suffixIcon: IconButton(
@@ -177,3 +177,4 @@ class _TextfieldState extends State<MadeApp> {
     );
   }
 }
+
