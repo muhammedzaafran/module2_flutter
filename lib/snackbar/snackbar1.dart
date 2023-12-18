@@ -17,14 +17,14 @@ class _SnackBar1State extends State<SnackBar1> {
             child: ElevatedButton(onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                    duration: Duration(seconds: 3),
+                    duration: const Duration(seconds: 3),
                     backgroundColor: Colors.red,
                     action: SnackBarAction(
                       textColor: Colors.yellow,
                       label: "Retry", onPressed: () {
 
                     },),
-                    content: Text("No internet",))
+                    content: const Text("No internet",))
                 
               );
 
