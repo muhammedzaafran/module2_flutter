@@ -12,7 +12,7 @@ class _TextfieldState extends State<Textfield> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Text field sample"),
+        title: const Text("Text field sample"),
       ),
       body: Container(
         alignment: Alignment.center,

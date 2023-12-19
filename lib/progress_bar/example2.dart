@@ -21,16 +21,16 @@ class Loader extends StatelessWidget {
       appBar: AppBar(
         title: const Text("PROGRESS BAR",
         style: TextStyle(
-          fontSize: 30,
+          fontSize: 34,
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.w900,
-          color: Colors.tealAccent,
+          color: Colors.greenAccent,
         ),
         ),
       centerTitle: true,
         backgroundColor: Colors.black,
 
-        titleTextStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+        titleTextStyle: const TextStyle(fontWeight: FontWeight.bold),
       ),
       body: const Center(
         child: Column(
@@ -45,8 +45,8 @@ class Loader extends StatelessWidget {
               height: 16,
             ),
             LinearProgressIndicator(
-              backgroundColor: Colors.black,
-              valueColor: AlwaysStoppedAnimation(Colors.greenAccent),
+              backgroundColor: Colors.greenAccent,
+              valueColor: AlwaysStoppedAnimation(Colors.black),
               minHeight: 20,
             )
           ],

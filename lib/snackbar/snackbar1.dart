@@ -14,11 +14,16 @@ class _SnackBar1State extends State<SnackBar1> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: ElevatedButton(onPressed: () {
+            child: ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.black),
+                  foregroundColor: MaterialStatePropertyAll(Colors.yellow),
+                ),
+                onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                     duration: const Duration(seconds: 3),
-                    backgroundColor: Colors.red,
+                    backgroundColor: Colors.black,
                     action: SnackBarAction(
                       textColor: Colors.yellow,
                       label: "Retry", onPressed: () {
@@ -28,7 +33,7 @@ class _SnackBar1State extends State<SnackBar1> {
                 
               );
 
-            }, child: const Text("Show Snackbar")),
+            }, child: const Text("Connect to Wi-fi")),
           )
         ],
       ),
