@@ -17,7 +17,7 @@ class _LinearSampleState extends State<LinearSample> {
     Timer(Duration(
       seconds: 3
     ), () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => CircleSample() ,));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const CircleSample() ,));
 
     });
   }
