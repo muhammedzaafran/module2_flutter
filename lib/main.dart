@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:module2_flutter/state_management/provider/controller/counternotifier.dart';
+import 'package:module2_flutter/counterapp/counterapp.dart';
+import 'package:module2_flutter/freesamples/clone.dart';
+import 'package:module2_flutter/menu/example1.dart';
+import 'package:module2_flutter/radio_btn/eg1.dart';
 import 'package:module2_flutter/state_management/provider/view/countpage.dart';
-import 'package:provider/provider.dart';
+import 'package:module2_flutter/state_management/setstate/counterapp.dart';
+import 'package:module2_flutter/tab_bar/example1.dart';
+import 'package:module2_flutter/uri_launcher/eg1.dart';
+
+import 'listview/example3.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => CounterNotifier(),
-      child: const MaterialApp(
-        home: CounterPage(),
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:Application()
     );
   }
 }
