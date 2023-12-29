@@ -30,7 +30,7 @@ class _ApplicationState extends State<Application> {
           ),
           backgroundColor: Colors.white,
           appBar: AppBar(
-            backgroundColor: Colors.greenAccent,
+            backgroundColor: const Color(0xff128C7E),
             title: const Text(
               "CloneApp",
               style: TextStyle(
@@ -40,7 +40,7 @@ class _ApplicationState extends State<Application> {
             elevation: 10,
             bottom: const TabBar(
                 labelColor: Colors.white,
-                indicatorColor: Colors.green,
+                indicatorColor: Colors.white,
                 unselectedLabelColor: Colors.white,
                 // dividerColor: Colors.green,
                 // indicatorSize: TabBarIndicatorSize.tab,
@@ -74,7 +74,7 @@ class _ApplicationState extends State<Application> {
                 },
               ),
               PopupMenuButton(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 itemBuilder: (context) {
                   return [
                     const PopupMenuItem(child: Text("New group")),
