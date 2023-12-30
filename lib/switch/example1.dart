@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(SwitchSample());
 
 class SwitchSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.black,
-            centerTitle: true,
-            title: const Text("S W I T C H  S A M P L E", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-          ),
-          body: Center(
-              child: SwitchScreen()
-          ),
-        )
+    return  Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        centerTitle: true,
+        title: const Text("S W I T C H  S A M P L E", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+      ),
+      body: Center(
+          child: SwitchScreen()
+      ),
     );
   }
 }
